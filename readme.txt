@@ -17,6 +17,8 @@ edgeR.analysis.R --input_matrix ../quantifications/encode.mouse.gene.expected_co
 awk '$NF<0.01 && $2<-10{print $1"\tover_brain_X_liver"}' edgeR.cpm1.n2.brain_X_liver.tsv > edgeR.0.01.over_brain_X_liver.txt
 awk '$NF<0.01 && $2>10 {print $1"\tover_liver_X_brain"}' edgeR.cpm1.n2.brain_X_liver.tsv > edgeR.0.01.over_liver_X_brain.txt
 
+wc -l edgeR.0.01.over*.txt
+
 #Heatmap
 
 awk '$3=="gene"{ match($0, /gene_id "([^"]+).+gene_type "([^"]+)/, var); print var[1],var[2] }' OFS="\t" /tutorial/refs/gencode.vM4.gtf \
