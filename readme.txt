@@ -1,6 +1,6 @@
 #1. Perform differential expression analysis between brain and liver using the EdgeR. Present results using a heatmap with hierarchical clustering in rows and columns and colored classification of differentially expressed genes (DEGs), i.e. overexpressed in brain versus liver and the other way around.
 
-docker run -i -t -v /home/blanca/tutorial:/tutorial -w /tutorial ceciliaklein/teaching:uvic
+docker run -i -t -v /home/therea/tutorial:/tutorial -w /tutorial ceciliaklein/teaching:uvic
 
 export PATH=$PATH:/tutorial/teaching-utils/;
 
